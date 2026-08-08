@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" font-family="Helvetica, Arial, sans-serif">
+  <title>Arquitetura — Sugestão de Resposta de Tickets</title>
+
+  <!-- notebook paper background -->
+  <rect x="0" y="0" width="1000" height="660" fill="#ffffff"/>
+  <g stroke="#cfe0f7" stroke-width="1">
+    <line x1="0" y1="40" x2="1000" y2="40"/>
+    <line x1="0" y1="80" x2="1000" y2="80"/>
+    <line x1="0" y1="120" x2="1000" y2="120"/>
+    <line x1="0" y1="160" x2="1000" y2="160"/>
+    <line x1="0" y1="200" x2="1000" y2="200"/>
+    <line x1="0" y1="240" x2="1000" y2="240"/>
+    <line x1="0" y1="280" x2="1000" y2="280"/>
+    <line x1="0" y1="320" x2="1000" y2="320"/>
+    <line x1="0" y1="360" x2="1000" y2="360"/>
+    <line x1="0" y1="400" x2="1000" y2="400"/>
+    <line x1="0" y1="440" x2="1000" y2="440"/>
+    <line x1="0" y1="480" x2="1000" y2="480"/>
+    <line x1="0" y1="520" x2="1000" y2="520"/>
+    <line x1="0" y1="560" x2="1000" y2="560"/>
+    <line x1="0" y1="600" x2="1000" y2="600"/>
+    <line x1="0" y1="640" x2="1000" y2="640"/>
+  </g>
+  <line x1="50" y1="0" x2="50" y2="660" stroke="#f3b3b3" stroke-width="1.5"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Base Tickets (cylinder) -->
+    <path d="M750,44 L750,114 A80,14 0 0,0 910,114 L910,44" fill="white"/>
+    <ellipse cx="830" cy="44" rx="80" ry="14" fill="white"/>
+
+    <!-- Rotina de Vetorização (box) -->
+    <rect x="720" y="185" width="200" height="70" rx="4" fill="white"/>
+
+    <!-- Base Vetorial (cylinder) -->
+    <path d="M750,324 L750,394 A80,14 0 0,0 910,394 L910,324" fill="white"/>
+    <ellipse cx="830" cy="324" rx="80" ry="14" fill="white"/>
+
+    <!-- LLM (box) -->
+    <rect x="340" y="20" width="160" height="70" rx="4" fill="white"/>
+
+    <!-- Servidor Principal (box) -->
+    <rect x="310" y="280" width="220" height="90" rx="4" fill="white"/>
+
+    <!-- Base de Sugestões (cylinder) -->
+    <path d="M340,494 L340,564 A80,14 0 0,0 500,564 L500,494" fill="white"/>
+    <ellipse cx="420" cy="494" rx="80" ry="14" fill="white"/>
+
+    <!-- Usuário Atendente (person) -->
+    <circle cx="120" cy="300" r="18" fill="white"/>
+    <path d="M90,368 C90,335 150,335 150,368" fill="white"/>
+
+    <!-- Base Tickets -> Rotina -->
+    <path d="M825,128 C820,150 820,165 822,183" marker-end="url(#arrow)"/>
+    <!-- Rotina -> Base Vetorial -->
+    <path d="M825,255 C820,275 820,295 825,308" marker-end="url(#arrow)"/>
+    <!-- Base Vetorial -> Servidor Principal -->
+    <path d="M748,365 C640,350 560,320 532,300" marker-end="url(#arrow)"/>
+
+    <!-- Servidor Principal <-> LLM -->
+    <path d="M390,280 C390,220 390,150 393,92" marker-end="url(#arrow)"/>
+    <path d="M450,92 C450,150 450,220 450,278" marker-end="url(#arrow)"/>
+
+    <!-- Servidor Principal <-> Base de Sugestões -->
+    <path d="M390,370 C390,410 390,455 390,492" marker-end="url(#arrow)"/>
+    <path d="M450,492 C450,455 450,410 450,372" marker-end="url(#arrow)"/>
+
+    <!-- Servidor Principal <-> Usuário Atendente -->
+    <path d="M308,308 C240,300 200,296 158,294" marker-end="url(#arrow)"/>
+    <path d="M156,326 C200,332 240,336 308,340" marker-end="url(#arrow)"/>
+
+  </g>
+
+  <g fill="#1e3a8a" font-size="17" text-anchor="middle">
+    <text x="830" y="49">Base Tickets</text>
+    <text x="820" y="225">Rotina de</text>
+    <text x="820" y="245">Vetorização</text>
+    <text x="830" y="329">Base Vetorial</text>
+
+    <text x="420" y="60">LLM</text>
+    <text x="420" y="330">Servidor Principal</text>
+    <text x="420" y="499">Base de</text>
+    <text x="420" y="519">Sugestões</text>
+
+    <text x="120" y="398">Usuário</text>
+    <text x="120" y="416">Atendente</text>
+
+    <text x="330" y="185" font-size="14" font-style="italic">ticket +</text>
+    <text x="330" y="200" font-size="14" font-style="italic">semelhantes</text>
+    <text x="510" y="185" font-size="14" font-style="italic">sugestão</text>
+  </g>
+</svg>
